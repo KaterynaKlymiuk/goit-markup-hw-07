@@ -1,0 +1,160 @@
+$containerWidth: 1200px;
+$containerPadding: 0 15px;
+$contentColor: rgba(117, 117, 117, 1);
+$headingColor: rgba(33, 33, 33, 1);
+$darBackground: rgba(47, 48, 58, 1);
+$lightBackground: rgba(245, 244, 250, 1);
+$interactiveColor: rgba(33, 150, 243, 1);
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: $contentColor;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: $containerWidth;
+    padding: $containerPadding;
+}
+
+.header,
+.navigation,
+.navigation__list,
+.studio-contacts
+ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header {
+    min-height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-bottom: 1px solid #ECECEC;
+}
+
+.navigation__logo {
+    margin-right: 93px;
+
+    font-family: "Raleway";
+    
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+
+    letter-spacing: 0.03em;
+    
+    color: rgba(0, 0, 0, 1);
+
+    span {
+        color: $interactiveColor;
+    }
+}
+
+.navigation__item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    
+    letter-spacing: 0.02em;
+
+    color: $headingColor;
+
+
+}
+
+.navigation__link {
+    color: $headingColor;
+}
+    
+.navigation__link--active {
+    position: relative;
+
+    color: $interactiveColor;
+}
+
+.navigation__link--active::after {
+    content: " ";
+    position: absolute;
+
+    left: 0px;
+    bottom: -32px;
+
+   display: block;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: $interactiveColor;
+}
+
+.navigation__item:not(:last-child) {
+   margin-right: 50px;
+}
+
+.studio-contacts__item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    
+    letter-spacing: 0.02em;
+    
+    color: $contentColor;
+}
+
+.studio-contacts__item + .studio-contacts__item {
+    margin-left: 50px;
+}
+
+.studio-contacts__link {
+    text-decoration: none;
+    
+    color: $contentColor;
+}
+
+.studio-contacts__icon {
+    margin-right: 10px;
+    
+    fill: currentColor;
+}
+
+.mail {
+    width: 16px;
+    height: 12px;
+}
+
+.tel {
+    width: 10px;
+    height: 16px;
+}
+
+.navigation__link:hover,
+.navigation__link:focus,
+.studio-contacts__link:hover,
+.studio-contacts__link:focus {
+    color: $interactiveColor;
+}
